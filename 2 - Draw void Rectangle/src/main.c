@@ -7,10 +7,10 @@ int main(void)
     void *win;
     void *img;
     int *data;
-    int width = 800;
-    int height = 1200;
+    int width = 600;
+    int height = 900;
     int tot_pixel = width * height;
-    int maargin_l_r = 200;
+    int maargin_l_r = 150;
     int temp_1, temp_2, temp_3;
     int i = 0;
     int x = 0;
@@ -30,7 +30,7 @@ int main(void)
         {
             data[x] = 0x00FFFF;
         }
-        if(i%800==0)
+        if(i%width==0)
         {
             i=0;
         }
