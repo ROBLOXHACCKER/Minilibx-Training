@@ -16,6 +16,8 @@ int main(void)
     int temp_1, temp_2, temp_3;
     int i = 0;
     int x = 0;
+    int n = 0;
+    //int cl = 1;
     char *title = "so_long"; 
     
 
@@ -26,14 +28,19 @@ int main(void)
     
     while(x < tot_pixel)
     {
-        if(i > (grid_tomargin - (widthlinee/2)) && i < (grid_tomargin + (widthlinee/2))) 
+        if((i > (grid_tomargin - (widthlinee/2)) && i < (grid_tomargin + (widthlinee/2))) || (x > (width * (grid_tomargin-(widthlinee/2))) && (x < (width * (grid_tomargin+(widthlinee/2)))) && (n > (grid_tomargin - (widthlinee/2))) && (n < (grid_tomargin + (widthlinee/2))))) 
         {
             data[x] = 0xFFA500;
             printf("%d", i);
         }
+        
         if(i%(grid_tomargin + (widthlinee/2))==0 || x%width==0)
         {
             i = 0;
+        }
+        if(x%width == 0)
+        {
+            n++;
         }
         i++;
         x++;
