@@ -8,7 +8,7 @@ int main(void)
     void *img;
     int *data;
     int width = 800;
-    int height = 600;
+    int height = 1200;
     int tot_pixel = width * height;
     int maargin_l_r = 200;
     int temp_1, temp_2, temp_3;
@@ -23,7 +23,7 @@ int main(void)
 
     while(x < tot_pixel)
     {
-        if(i > maargin_l_r && i < width - maargin_l_r)
+        if((i > maargin_l_r && i < width - maargin_l_r) && (x > maargin_l_r * width && x < (tot_pixel - maargin_l_r * width)))
         {
             data[x] = 0xFFA500;
         }else
